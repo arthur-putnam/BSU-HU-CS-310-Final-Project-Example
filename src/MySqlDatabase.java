@@ -17,7 +17,7 @@ public class MySqlDatabase {
     public static Connection getDatabaseConnection(
             String username, String password, String host, int port, String databaseName) throws SQLException{
         String databaseURL = String.format(
-                "jdbc:mysql://%s:%s/%s?verifyServerCertificate=false&useSSL=true", host, port, databaseName);
+                "jdbc:mysql://%s:%s/%s?verifyServerCertificate=false&useSSL=true&serverTimezone=UTC", host, port, databaseName);
         try{
             return DriverManager.getConnection(databaseURL, username, password);
         } catch (SQLException sqlException){
