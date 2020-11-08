@@ -5,11 +5,11 @@ import java.sql.SQLException;
 public class MySqlDatabase {
     public static Connection getDatabaseConnection() throws SQLException {
         Connection databaseConnection = null;
-        int databasePort = Integer.parseInt(System.getenv("MYSQL_PORT"));
-        String databaseHost = System.getenv("MYSQL_HOST");
-        String databaseUsername = System.getenv("MYSQL_USERNAME");
-        String databasePassword = System.getenv("MYSQL_PASSWORD");
-        String databaseName = System.getenv("MYSQL_DATABASE");
+        int databasePort = Integer.parseInt(System.getenv("CS310_PORT"));
+        String databaseHost = System.getenv("CS310_HOST");
+        String databaseUsername = System.getenv("CS310_USERNAME");
+        String databasePassword = System.getenv("CS310L_PASSWORD");
+        String databaseName = System.getenv("CS310_DATABASE");
 
         return getDatabaseConnection(databaseUsername, databasePassword, databaseHost, databasePort, databaseName);
     }
