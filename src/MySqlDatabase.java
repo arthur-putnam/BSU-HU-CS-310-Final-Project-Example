@@ -8,7 +8,7 @@ public class MySqlDatabase {
         int databasePort = Integer.parseInt(System.getenv("CS310_PORT"));
         String databaseHost = System.getenv("CS310_HOST");
         String databaseUsername = System.getenv("CS310_USERNAME");
-        String databasePassword = System.getenv("CS310L_PASSWORD");
+        String databasePassword = System.getenv("CS310_PASSWORD");
         String databaseName = System.getenv("CS310_DATABASE");
 
         return getDatabaseConnection(databaseUsername, databasePassword, databaseHost, databasePort, databaseName);
